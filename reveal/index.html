@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Presentation model OCI and TCP/IP</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/serif.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><p>Сетевая модель OSI.</p> 
+				<h6>Абстрактное представление модели: OSI</h6>
+					<ul>
+						<li class="fragment">Прикладной (application)</li>
+						<li class="fragment">Представительский (presentation)</li>
+						<li class="fragment">Сеансовый (session)</li>
+						<li class="fragment">Транспортный (transport)</li>
+						<li class="fragment">Сетевой (network)</li>
+						<li class="fragment">Канальный (data link)</li>
+						<li class="fragment">Физический   1 (physical)</li>
+					</ul>
+				</section>
+				<section><img data-src="jpg_osi/OSI.png"></section>
+				<section><img data-src="jpg_osi/net.jpg"></section>
+				<section><p class="fragment">Протоколы прикладной уровень</p><p>HTTP, FTP, SMTP</p></section>
+				
+				<section><p class="fragment">Протоколы представительский уровень</p><p>XML, JPEG</p></section>
+				
+				<section><p class="fragment">Протоколы сеансовый</p><p>RPC, PAP</p></section>
+				
+				<section><p class="fragment">Протоколы транспортный</p><p>TCP, UDP</p></section>
+				
+				<section><p class="fragment">Протоколы сетевой уровень</p><p>IPv4, IPv6</p></section>
+				
+				<section><p class="fragment">Протоколы канальны уровень</p><p>PPP, IEEE</p></section>
+				
+				<section>
+				<h6>Представление стека протоколов TCP/IP</h6>
+				<img data-src="jpg_osi/1.gif">
+				</section>
+				
+				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
